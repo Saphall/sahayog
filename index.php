@@ -32,9 +32,9 @@
     </div> -->
 
     <!--latestReports-->
-    <div class="report">
+    <!-- <div class="report">
         <p> This contains images of latest lost.</p>
-    </div>
+    </div> -->
 
 
     <script src="JS/app.js"></script>

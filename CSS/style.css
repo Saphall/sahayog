@@ -240,7 +240,7 @@
 .main__content p {
     margin-top: 1rem;
     font-size: 2rem;
-    font: weight 700;
+    font-weight: 700;
     color: #fff;
 }
 
