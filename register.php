@@ -96,6 +96,12 @@
                         <span>Sign Up</span>
                     </button>
                 </div>
+				<div class="text-center text-sm">
+                  	Already have an account?
+                  	<a href="" class="text-purple-500">
+                    	Sign in here
+                  	</a>
+                </div>
             </form>
         </div>
 	</div>
