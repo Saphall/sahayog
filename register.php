@@ -29,7 +29,7 @@
 				</div>
 				<div class="my-3" align="start">
 					<label for="">Gender</label>
-					<div class="flex gap-x-5 items-center">
+					<div class="flex flex-wrap gap-x-5 items-center">
 						<div class="flex items-center">
 							<input id="male" name="gender" type="radio" value="male" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
 							<label for="male" class="ml-1 block text-sm font-medium text-gray-700"> Male </label>
