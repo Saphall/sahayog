@@ -41,12 +41,12 @@ if (isset($_POST['btn_login'])) {
 
                         setcookie('user', $user['name'], time() + (60*60*24), "/"); // 60*60*24 =  86400 = 1 day
 
-                            header('location: user/index.php');
+                            header('location: user/index');
                         
                     } else { //unverified login
                         $_SESSION['error_msg'] = 'Verify your email to login';
                         $errors['verify_email'] = 'Verify your email to login.$error';
-                        header('location: login.php');
+                        header('location: login');
                     }
                     
                     exit(0);

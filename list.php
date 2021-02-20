@@ -19,6 +19,7 @@
     <div class="text-center mt-10 px-5">
         <p class="text-6xl">Sahayog</p>
         <p class="mt-5 text-xl text-gray-700 italic">Helping people find their lost ones!</p>
+        <h2>list</h2>
     </div>
 
 

@@ -38,6 +38,32 @@ CREATE TABLE `details` (
 
 /*Data for the table `details` */
 
+/*Table structure for table `posts` */
+
+DROP TABLE IF EXISTS `posts`;
+
+CREATE TABLE `posts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `dob` date NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `relation` varchar(255) NOT NULL,
+  `lost` tinyint(1) DEFAULT 0,
+  `found` tinyint(1) DEFAULT 0,
+  `lost_at` timestamp NULL DEFAULT '0000-00-00 00:00:00',
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT '0000-00-00 00:00:00',
+  `found_at` timestamp NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `created_by` (`created_by`),
+  CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `posts` */
+
 /*Table structure for table `users` */
 
 DROP TABLE IF EXISTS `users`;

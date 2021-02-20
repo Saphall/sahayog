@@ -7,6 +7,8 @@
 </head>
 <body>
 	<h2>welcome <?php echo $_SESSION['username']; ?></h2>
+
+	<button><a href="../logout">Logout</a></button>
 	
 </body>
 </html>
