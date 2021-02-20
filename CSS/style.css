@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbi Sans'sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 .navbar {
@@ -192,5 +192,130 @@
 
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/*header section*/
+.main {
+    background-color: #141412;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #141412;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content h1 {
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moztext-fill-color: transparent;
+}
+
+.main__content h2 {
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moztext-fill-color: transparent;
+
+}
+
+.main__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font: weight 700;
+    color: #fff;
+}
+
+#main__img {
+    height: 37em;
+    weight: 25em;
+}
+
+/*mob*/
+@media screen and (max-width:960px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main__content p {
+        margin-top: 1 rem;
+        font-size: 1.5rem;
+    }
+
+    #main__img {
+        height: 26em;
+        width: 30em;
+    }
+}
+
+
+@media screen and (max-width:968px) {
+
+
+
+    .main__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main__content p {
+        margin-top: 1 rem;
+        font-size: 1.3rem;
+    }
+
+    #main__img {
+        height: 26em;
+        width: 29em;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .main__content p {
+        margin-top: 1 rem;
+        font-size: 1rem;
+    }
+
+    #main__img {
+        height: 22em;
+        width: 22em;
     }
 }
