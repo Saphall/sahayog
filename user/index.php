@@ -12,7 +12,7 @@
 <body>
 	<div class="flex flex-wrap">
 		<div class="w-full sm:w-48 pt-3 bg-yellow-50 sm:min-h-screen border border-r border-gray-300">
-			<div class="text-center text-4xl mb-3 font-semibold">
+			<div class="sahayog_logo text-center text-4xl mb-3 font-semibold">
 				Sahayog
 			</div>
 			<!-- Lorem Ipsum -->
