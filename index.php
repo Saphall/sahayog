@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sahayog - Helping people find their lost ones!</title>
     <link rel="stylesheet" href="CSS/style.css">
+     <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/pray.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/fb9d3931c2.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -19,6 +20,8 @@
             <div class="main__content">
                 <h1>SAHAYOG</h1>
                 <p>Helping people find their lost ones!</p>
+                <br>
+                <button class='button' id='signup'>Sign up</button>
             </div>
             <div class="main__img--container">
                 <img src="Images/Logo1.png" alt="" id="main__img">
@@ -38,6 +41,11 @@
 
 
     <script src="JS/app.js"></script>
+    <script>
+        document.getElementById("signup").onclick = function() {
+            window.location.href = ("register");
+        }
+    </script>
 </body>
 
 </html>

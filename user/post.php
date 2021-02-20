@@ -7,6 +7,7 @@
     <title>Report lost person - Sahayog</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="https://kit.fontawesome.com/fb9d3931c2.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/pray.png" type="image/x-icon">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
