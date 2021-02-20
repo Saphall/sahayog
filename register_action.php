@@ -47,13 +47,13 @@ if (isset($_POST['btn_register'])) {
 
     if (count($errors) === 0) {
 
-        $detail_query = "INSERT INTO user_details SET first_name=?,middle_name=?,last_name=?,dob=?,gender=?,address1=?,address2=?,email=?,mobile=?";
+        $detail_query = "INSERT INTO details SET first_name=?,middle_name=?,last_name=?,dob=?,gender=?,address1=?,address2=?,email=?,mobile=?";
         $detail_stmt = $conn->prepare($detail_query);
         $detail_stmt->bind_param('sssssssss', $firstName, $middleName, $lastName, $dob, $gender, $address1, $address2, $email, $mobile);
         $detail_result = $detail_stmt->execute();
         // echo $detail_stmt->insert_id;exit;
 
-        $user_query = "INSERT INTO users SET username=?, email=?, token=?, password=?, type=?, detail=?";
+        $user_query = "INSERT INTO users SET username=?, email=?, token=?, password=?, type=?, detail=?, verified=1";
         $user_stmt = $conn->prepare($user_query);
         $detail_id = $detail_stmt->insert_id;
         $user_stmt->bind_param('sssssd', $username, $email, $token, $password, $type, $detail_id);
@@ -68,7 +68,7 @@ if (isset($_POST['btn_register'])) {
 
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
-            $_SESSION['verified'] = false;
+            // $_SESSION['verified'] = false;
             $_SESSION['success_msg'] = 'You have registered sucessfully! Please check email to verify your account.';
 
             header('location: login.php');
