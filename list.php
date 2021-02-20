@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +28,6 @@
     <!-- NavBar -->
     <?php require 'includes/navbar.php'; ?>
 
-
     <!--content-->
     <!-- Name and images below are placeholder .. they are supposed to replaced with actual content -->
     <div class="text-center mt-10 px-5">
@@ -37,46 +37,50 @@
             <p class="font-small">If you know about anyone below please make sure to let their relatives know.</p>
             <div align="center" class="my-10">
                 <div class="w-full md:w-64">
-                    <input id="search" name="search" type="text" required class="appearance-none rounded-none relative block w-full md:w-64 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Search By Name" />
+                    <form action="search.php" method="GET"></form>
+                        <input id="search" name="search" type="text" required class="appearance-none rounded-none relative block w-full md:w-64 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Search By Name" />
+
+                        <input type="submit" class="" name="go" value="Go" />
+                    </form>
                 </div>
             </div>
         </div>
         <div class="mt-10 flex flex-wrap gap-8 justify-center">
-            <div class="w-32">
-                <img class="mx-auto w-24 h-24 shadow-md object-cover rounded-full" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8cG9ydHJhaXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                <p class="font-semibold my-2">Ram Sharma</p>
-                <a id='details' class="bg-green-300 shadow font-medium px-3 py-1 rounded-full" href="#">Details</a>
-            </div>
-            <div class="w-32">
-                <img class="mx-auto w-24 h-24 shadow-md object-cover rounded-full" src="https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                <p class="font-semibold my-2">Hari Singh</p>
-                <a id='details' class="bg-green-300 shadow font-medium px-3 py-1 rounded-full" href="#">Details</a>
-            </div>
-            <div class="w-32">
-                <img class="mx-auto w-24 h-24 shadow-md object-cover rounded-full" src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                <p class="font-semibold my-2">Pradeep Lama</p>
-                <a id='details' class="bg-green-300 shadow font-medium px-3 py-1 rounded-full" href="#">Details</a>
-            </div>
+
+            <?php 
+
+            require 'Auth/connection.php';
+            $reporter = $_SESSION['id'];
+
+            if (isset($_GET['go'])) {
+                $search = $_GET['search'];
+                $query = "SELECT * from reports as r where r.name like '%$serarch%'";
+            } else {
+                $query = "SELECT * from reports as r ";
+            }
+            // echo $query;exit;
+            // if ($_SESSION['type'] == 'user') {
+            //     $query .= "where r.reported_by=$reporter";
+            // }
+
+            $result=mysqli_query($conn,$query);
+
+            $row_count = mysqli_num_rows($result);
+              // echo $row_count;
+
+            if ($result && $row_count>0) {
+                
+            // $i=0; 
+            while ($report=mysqli_fetch_assoc($result)) { 
+
+             ?>
             <div class="w-32">
                 <img class="mx-auto w-24 h-24 shadow-md object-cover rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                <p class="font-semibold my-2">Sita Lamsal</p>
-                <a id='details' class="bg-green-300 shadow font-medium px-3 py-1 rounded-full" href="#">Details</a>
+                <p class="font-semibold my-2"><?php echo $report['name']; ?></p>
+                <a id='details' class="bg-green-300 shadow font-medium px-3 py-1 rounded-full" href="detail.php?id=<?php echo $report['id']; ?>">Details</a>
             </div>
-            <div class="w-32">
-                <img class="mx-auto w-24 h-24 shadow-md object-cover rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                <p class="font-semibold my-2">Shyam Shrestha</p>
-                <a id='details' class="bg-green-300 shadow font-medium px-3 py-1 rounded-full" href="#">Details</a>
-            </div>
-            <div class="w-32">
-                <img class="mx-auto w-24 h-24 shadow-md object-cover rounded-full" src="https://images.unsplash.com/photo-1450297350677-623de575f31c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzN8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                <p class="font-semibold my-2">Rita Kumari</p>
-                <a id='details' class="bg-green-300 shadow font-medium px-3 py-1 rounded-full" href="#">Details</a>
-            </div>
-            <div class="w-32">
-                <img class="mx-auto w-24 h-24 shadow-md object-cover rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDF8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                <p class="font-semibold my-2">Nischal Thapa</p>
-                <a id='details' class="bg-green-300 shadow font-medium px-3 py-1 rounded-full" href="#">Details</a>
-            </div>
+
+            <?php } } ?>
         </div>
     </div>
     </div>

@@ -17,7 +17,7 @@ if (isset($_POST['btn_report'])) {
 
     $query = "INSERT INTO reports SET name=?, age=?, gender=?, address=?, description=?, lost_at=?, lost_from=?, relation=?, reported_by=?, lost=1";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param('sdsssssss', $name, $age, $gender, $address, $description, $lost_on, $lost_from, $relation, $reported_by);
+    $stmt->bind_param('sdsssssss', $name, $age, $gender, $address, $description, $lost_on, $lost_from, $relation, $reporter);
     $result = $stmt->execute();
 
     if ($result) {
