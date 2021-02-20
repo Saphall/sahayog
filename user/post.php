@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +31,11 @@
         </div>
         <div class="pt-5 sm:pt-0 flex-grow">
             <div class="w-full bg-gray-300 p-2 font-semibold">Report Lost User</div>
+            <?php if($_SESSION['error_msg']): ?>
+                <div class="bg-red-200 rounded-lg p-3 border-l-4 border-red-400">
+                    <?php echo $_SESSION['error_msg']; ?>
+                </div>
+            <?php endif: ?>
             <div class="p-5">
                 <form action="register_action.php" method="POST">
                     <div>
