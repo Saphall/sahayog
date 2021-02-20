@@ -1,6 +1,6 @@
 <nav class="navbar">
     <div class="navbar__container">
-        <a href="#" id="navbar__logo"><i class="fas fa-praying-hands"></i> SAHAYOG</a>
+        <a href="#" class="sahayog_logo"><i class="fas fa-praying-hands"></i> SAHAYOG</a>
 
         <div class="navbar__toogle" id="mobile-menu">
             <span class="bar"></span>
