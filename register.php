@@ -5,6 +5,7 @@
 	<title>Register</title>
 </head>
 <body>
+	<h2>Registration</h2>
 	<form action="register_action.php" method="POST">
 		<p>
 			<label for="">First Name</label>
