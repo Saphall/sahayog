@@ -66,7 +66,7 @@
                 </div>
                 <div class="text-center text-sm">
                     Don't have an account?
-                    <a href="" class="text-purple-500">
+                    <a href="register" class="text-purple-500">
                         Create an Account here
                     </a>
                 </div>

@@ -37,10 +37,11 @@
             <p class="font-small">If you know about anyone below please make sure to let their relatives know.</p>
             <div align="center" class="my-10">
                 <div class="w-full md:w-64">
-                    <form action="search.php" method="GET"></form>
+                    <form action="" method="GET"></form>
                         <input id="search" name="search" type="text" required class="appearance-none rounded-none relative block w-full md:w-64 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Search By Name" />
 
                         <input type="submit" class="" name="go" value="Go" />
+                        <!-- <a href="list.php?search='kali">go</a> -->
                     </form>
                 </div>
             </div>
@@ -52,9 +53,9 @@
             require 'Auth/connection.php';
             $reporter = $_SESSION['id'];
 
-            if (isset($_GET['go'])) {
+            if ( (isset($_GET['go'])) && (!empty($_GET['search'])) ) {
                 $search = $_GET['search'];
-                $query = "SELECT * from reports as r where r.name like '%$serarch%'";
+                $query = "SELECT * from reports as r where r.name like '%$search%'";
             } else {
                 $query = "SELECT * from reports as r ";
             }

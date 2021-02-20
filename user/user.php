@@ -23,22 +23,39 @@ session_start();
 			<?php include 'includes/success.php'; ?>
             <?php include 'includes/error.php'; ?>
 
+            <!-- <a class="bg-blue-300 shadow font-medium px-3 py-1 rounded-full" href="admin_add">Add User</a> -->
+
 			<div class="mt-5 p-5 text-sm" align="center">
 				<table class="w-full">
 					<tr>
-						<th class="px-3">Name</th>
-						<th class="px-3">Gender</th>
-						<th class="px-3">DOB</th>
-						<th class="px-3">Email</th>
+						<th class="px-3">S.N.</th>
 						<th class="px-3">Username</th>
+						<th class="px-3">Email</th>
+						<th class="px-3">Gender</th>
+						<th class="px-3">Mobile</th>
 						<th class="px-3">Actions</th>
 					</tr>
+					<?php 
+
+					require '../Auth/connection.php';
+					$query = "SELECT u.username as username, u.email as email, d.mobile as mobile, d.gender as gender from users as u left join details as d on u.detail=d.id where u.type='user'";
+					$result=mysqli_query($conn,$query);
+
+	                $row_count = mysqli_num_rows($result);
+	                  // echo $row_count;
+
+	                if ($result && $row_count>0) {
+	                    
+	                $i=0; 
+	                while ($user=mysqli_fetch_assoc($result)) { 
+
+					 ?>
 					<tr class="text-center">
-						<td>Hari Sharma</td>
-						<td>Male</td>
-						<td>1998-07-21</td>
-						<td>hari.sharma@gmail.com</td>
-						<td>hari.sharma</td>
+						<td scope="row"><?php echo ++$i; ?></td>
+						<td><?php echo $user['username']; ?></td>
+						<td><?php echo $user['email']; ?></td>
+						<td><?php echo $user['gender']; ?></td>
+						<td><?php echo $user['mobile']; ?></td>
 						<td>
 							<span class="text-yellow-500">
 							<a href="#">View</a>
@@ -51,6 +68,7 @@ session_start();
 							</span>
 						</td>
 					</tr>
+				<?php }} ?>
 				</table>
 			</div>
 		</div>

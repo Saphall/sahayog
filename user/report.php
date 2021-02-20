@@ -1,6 +1,13 @@
 <?php 
 session_start();
+
+if (empty($_SESSION['id'])) {
+	$_SESSION['error_msg']= 'you need to get registerd to report.';
+	header("Location: ../register");
+}
+
  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +26,15 @@ session_start();
 		<div class="pt-5 sm:pt-0 flex-grow">
 			<div class="w-full bg-gray-300 p-2 font-semibold">Registered Users</div>
 
+			<a class="bg-blue-300 shadow font-medium px-3 py-1 rounded-full" href="report_add">Add Report</a>
+
 			<?php include 'includes/success.php'; ?>
             <?php include 'includes/error.php'; ?>
             
 			<div class="mt-5 p-5 text-sm" align="center">
 				<table class="w-full" border="2">
 					<tr>
+						<th class="px-3">S.N.</th>
 						<th class="px-3">Name</th>
 						<th class="px-3">Gender</th>
 						<th class="px-3">Age</th>
@@ -46,11 +56,12 @@ session_start();
 
 	                if ($result && $row_count>0) {
 	                    
-	                // $i=0; 
+	                $i=0; 
 	                while ($report=mysqli_fetch_assoc($result)) { 
 
 					 ?>
 					<tr class="text-center">
+						<td scope="row"><?php echo ++$i; ?></td>
 						<td><?php echo $report['name']; ?></td>
 						<td><?php echo $report['gender']; ?></td>
 						<td><?php echo $report['age']; ?></td>

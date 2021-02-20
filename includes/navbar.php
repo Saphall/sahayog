@@ -11,7 +11,7 @@
         <ul class="navbar__menu">
             <li class="navbar__item"><a href="index" class="navbar__links">Home</a></li>
             <li class="navbar__item"><a href="list" class="navbar__links">List</a></li>
-            <li class="navbar__item"><a href="#" class="navbar__links">Report</a> </li>
+            <li class="navbar__item"><a href="user/report_add" class="navbar__links">Report</a> </li>
             <li class="navbar__btn"><a href="register" class="button">Sign Up</a> </li>
         </ul>
     </div>

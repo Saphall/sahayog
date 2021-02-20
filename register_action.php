@@ -69,12 +69,12 @@ if (isset($_POST['btn_register'])) {
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
             // $_SESSION['verified'] = false;
-            $_SESSION['success_msg'] = 'You have registered sucessfully! Please check email to verify your account.';
+            $_SESSION['success_msg'] = 'You have registered sucessfully.';
 
             header('location: login.php');
         } else {
             echo 'error';
-            $_SESSION['error_msg'] = "Database error: Could not register user.";
+            $_SESSION['error_msg'] = "Could not register user.";
         }
     }
 }
