@@ -18,7 +18,7 @@
 					</div>
 					<div align="start" class="w-full md:w-64">
 						<label for="middlename">Middle Name</label>
-						<input id="middlename" name="middlename" type="text" required class="appearance-none rounded-none relative block w-full md:w-64 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Middle Name" />
+						<input id="middlename" name="middlename" type="text" class="appearance-none rounded-none relative block w-full md:w-64 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Middle Name" />
 					</div>
 					<div align="start" class="w-full md:w-64">
 						<label for="lastname">Last Name</label>
