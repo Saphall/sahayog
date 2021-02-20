@@ -28,7 +28,7 @@
     padding: 0 50px;
 }
 
-#navbar__logo {
+.sahayog_logo {
     background-color: #ff8177;
     background-image: linear-gradient(to top, #ff8855 0%, #ff0844 0%, #ffb199 100%);
     background-size: 100%;
@@ -36,10 +36,6 @@
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
     font-size: 2rem;
 }
 
@@ -132,10 +128,6 @@
         z-index: 99;
         height: 50vh;
         font-size: 1.6rem;
-    }
-
-    #navbar__logo {
-        padding-left: 25px;
     }
 
     .navbar__toogle .bar {
