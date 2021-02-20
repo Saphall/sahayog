@@ -16,7 +16,7 @@
 
     <!--content-->
     <!-- Name and images below are placeholder .. they are supposed to replaced with actual content -->
-    <div>
+    <!-- <div>
         <div class="flex flex-wrap justify-between gap-y-5 p-2 bg-gray-800 text-gray-100">
             <div class="font-semibold text-xl">Sahayog</div>
             <div class="flex flex-wrap gap-x-5">
@@ -24,7 +24,7 @@
                 <a href="#">List</a>
                 <a href="#">Report</a>
             </div>
-        </div>
+        </div> -->
         <div class="text-center mt-10 px-5">
             <div class="my-5">
                 <p class="text-2xl font-semibold mb-3">Lost people!</p>
