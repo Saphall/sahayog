@@ -52,7 +52,7 @@
             <?php 
 
             require 'Auth/connection.php';
-            $reporter = $_SESSION['id'];
+            // $reporter = $_SESSION['id'];
 
             if ( (isset($_GET['go'])) && (!empty($_GET['search'])) ) {
                 $search = $_GET['search'];

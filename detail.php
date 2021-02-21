@@ -22,7 +22,7 @@
          <?php 
 
             require 'Auth/connection.php';
-            $reporter = $_SESSION['id'];
+            $reporter = $_SESSION['id']?:'';
             $query = "SELECT * from reports as r ";
             if ($_SESSION['type'] == 'user') {
                 $query .= "where r.reported_by=$reporter";
