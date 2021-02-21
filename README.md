@@ -12,6 +12,22 @@ Helping People Find their lost ones. A public platform to claim finding and lost
 
 - read projectsetup.txt for setup
 
+
+### How to run the project:
+
+##### setup
+
+1. clone the project in htdocs/www folder
+2. export db to your machine and update the variable of Auth/connection.php
+3. now you are ready to use
+
+       credentials :
+       email: admin@mail.com
+       password : admin
+
+       email: marij@mail.com
+       password: maij
+
 ### What Problem it solves: 
 
 Sahayog is website created using HTML, CSS, JS and PHP where people can post and find about the lost peoples. Since there are large news commming at regular basic of lost people, we try to help all of those people suffering and make it as accessible as possible. First of all , it requires the account for a verification, i.e. asked for some verification documents to authenticate a user, then he/she can login to report for a missing person. Otherwise, posting by any public is not allowed. However any general people can find about the lost people from list sections and can create an account to report as well as post. Details of reported lost persons can be found on details page, which shows all details reported by a verified user.
