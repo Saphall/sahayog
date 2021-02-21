@@ -52,7 +52,7 @@
 						<td><?php echo $user['username']; ?></td>
 						<td><?php echo $user['email']; ?></td>
 						<td>
-							<span class="text-yellow-500">
+							<!-- <span class="text-yellow-500">
 							<a href="#">View</a>
 							</span>
 							<span class="text-blue-700">
@@ -60,7 +60,7 @@
 							</span>
 							<span class="text-red-700">
 							<a href="#">Delete</a>
-							</span>
+							</span> -->
 						</td>
 					</tr>
 				<?php }} ?>

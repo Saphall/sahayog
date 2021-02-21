@@ -58,7 +58,7 @@ session_start();
 						<td><?php echo $user['gender']; ?></td>
 						<td><?php echo $user['mobile']; ?></td>
 						<td>
-							<span class="text-yellow-500">
+							<!-- <span class="text-yellow-500">
 							<a href="#">View</a>
 							</span>
 							<span class="text-blue-700">
@@ -66,7 +66,7 @@ session_start();
 							</span>
 							<span class="text-red-700">
 							<a href="#">Delete</a>
-							</span>
+							</span> -->
 						</td>
 					</tr>
 				<?php }} ?>

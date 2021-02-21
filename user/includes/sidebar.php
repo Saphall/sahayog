@@ -8,7 +8,9 @@
     </div>
     <div class="flex flex-col mt-10">
         <a href="../" class="bg-gray-50 hover:bg-gray-200 border-t border-b p-2"  target="_blank"> Home </a>
-        <!-- <a href="profile" class="bg-gray-50 hover:bg-gray-200 border-t border-b p-2"> Profile </a> -->
+        <?php if($_SESSION['type'] == 'user'): ?>
+        <a href="profile" class="bg-gray-50 hover:bg-gray-200 border-t border-b p-2"> Profile </a>
+        <?php endif; ?>
         <?php if($_SESSION['type'] !== 'user'): ?>
         <a href="user" class="bg-gray-50 hover:bg-gray-200 border-b p-2"> Users </a>
     	<?php endif; ?>
