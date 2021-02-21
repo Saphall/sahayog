@@ -1,0 +1,11 @@
+#setup
+clone the project in htdocs/www folder
+export db to your machine and update the variable of Auth/connection.php
+now you are ready to use
+
+credentials :
+email: admin@mail.com
+password : admin
+
+email: marij@mail.com
+password: maij
