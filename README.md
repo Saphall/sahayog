@@ -19,7 +19,7 @@ Sahayog is website created using HTML, CSS, JS and PHP where people can post and
 ### How the projects looks: 
 
 <img src='Screenshots/home.png' width='70%' height='70%' >
-<img src='Screenshots/list.png ' width='50%' height='50%' >
+<img src='Images/list.png ' width='50%' height='50%' >
 <img src='Screenshots/login.png' width='50%' height='50%' >
 <img src='Screenshots/dash1.png' width='50%' height='50%' >
 <img src='Screenshots/das2.png' width='50%' height='50%' >
