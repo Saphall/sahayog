@@ -23,7 +23,7 @@
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1360px;
     margin: 0 auto;
     padding: 0 50px;
 }
@@ -37,7 +37,18 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-size: 2rem;
+
 }
+
+#navbar_logo {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding-left: 25px;
+}
+
 
 .fa-praying-hands {
     margin-right: 0.8rem;
@@ -72,6 +83,16 @@
     width: 100%;
 }
 
+#signup {
+    border: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 30%;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -81,12 +102,21 @@
     height: 100%;
     width: 100%;
     border-radius: 5px;
-    background: #e66557;
+    background: #be5145;
     color: #fff;
 }
 
-.button:hover {
+#log {
+    background: #69b15f;
+}
+
+#log:hover {
     background: #037c3a;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #942b1f;
     transition: all 0.3s ease;
 }
 
@@ -126,7 +156,7 @@
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
-        height: 50vh;
+        height: 60vh;
         font-size: 1.6rem;
     }
 
@@ -192,6 +222,8 @@
     background-color: #141412;
 }
 
+
+
 .main__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -208,6 +240,7 @@
 
 .main__content h1 {
     font-size: 4rem;
+    font-weight: bold;
     background-color: #ff8177;
     background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
     background-size: 100%;
@@ -243,6 +276,11 @@
 
 /*mob*/
 @media screen and (max-width:960px) {
+    #signup {
+        font-size: 1.5em;
+    }
+
+
     .main__container {
         display: grid;
         grid-template-columns: auto;
@@ -274,16 +312,22 @@
 }
 
 
-@media screen and (max-width:968px) {
+@media (max-width:960px) and (max-width:968px) {
+
+    #signup {
+        justify-self: center;
+        align-items: center;
+        margin: 0 auto;
 
 
+    }
 
     .main__content h1 {
         font-size: 2.5rem;
     }
 
     .main__content p {
-        margin-top: 1 rem;
+        margin-top: 1rem;
         font-size: 1.3rem;
     }
 
@@ -295,6 +339,9 @@
 
 @media screen and (max-width:480px) {
 
+    #signup {
+        margin: 0 auto;
+    }
 
     .main__content h1 {
         font-size: 2rem;

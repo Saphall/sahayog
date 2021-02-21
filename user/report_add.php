@@ -97,7 +97,8 @@ if (empty($_SESSION['id'])) {
         </div>
     </div>
 
-    <script src="JS/app.js"></script>
+    <script src="../JS/app.js"></script>
 </body>
+
 
 </html>
