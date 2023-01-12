@@ -38,7 +38,7 @@ CREATE TABLE `details` (
 
 /*Data for the table `details` */
 
-insert  into `details`(`id`,`first_name`,`middle_name`,`last_name`,`dob`,`gender`,`address1`,`address2`,`email`,`mobile`,`created_at`,`updated_at`) values 
+INSERT INTO `details`(`id`,`first_name`,`middle_name`,`last_name`,`dob`,`gender`,`address1`,`address2`,`email`,`mobile`,`created_at`,`updated_at`) VALUES 
 (1,'sunam','k','shrestha','2021-02-20','male','kathmandu','lalitpur','sunam@shrestha.com','9849516171','2021-02-20 15:02:59','0000-00-00 00:00:00'),
 (2,'Marij','','Singh','2021-02-21','male','kathmandu','lalitpur','marij@mail.com','9812345678','2021-02-21 05:15:13','0000-00-00 00:00:00');
 
@@ -70,7 +70,7 @@ CREATE TABLE `reports` (
 
 /*Data for the table `reports` */
 
-insert  into `reports`(`id`,`name`,`age`,`gender`,`address`,`description`,`relation`,`lost`,`found`,`lost_at`,`lost_from`,`found_at`,`found_from`,`reported_by`,`created_at`,`updated_at`) values 
+INSERT INTO `reports`(`id`,`name`,`age`,`gender`,`address`,`description`,`relation`,`lost`,`found`,`lost_at`,`lost_from`,`found_at`,`found_from`,`reported_by`,`created_at`,`updated_at`) values 
 (1,'Sunam Shrestha',21,'male','kathmandu','red shirt\r\ngreen pant','friend',1,0,NULL,'lalitpur','0000-00-00 00:00:00',NULL,2,'2021-02-20 20:04:37','0000-00-00 00:00:00'),
 (2,'Alex Jackson',55,'female','uk','no info','agent',1,0,'2021-02-19 00:00:00','lalitpur','0000-00-00 00:00:00',NULL,2,'2021-02-20 20:06:36','0000-00-00 00:00:00'),
 (3,'unknown',10,'male','kathmandu','baby','father',1,0,'2021-02-12 00:00:00','bhaktapur','0000-00-00 00:00:00',NULL,2,'2021-02-20 20:15:24','0000-00-00 00:00:00'),
@@ -103,7 +103,7 @@ CREATE TABLE `users` (
 
 /*Data for the table `users` */
 
-insert  into `users`(`id`,`username`,`email`,`password`,`verified`,`token`,`type`,`active`,`deleted`,`detail`) values 
+INSERT INTO `users`(`id`,`username`,`email`,`password`,`verified`,`token`,`type`,`active`,`deleted`,`detail`) VALUES 
 (1,'superadmin','superadmin@mail.com','$2y$10$nE1zPUtd0eEggGunK3gK5uQJYahG9qASWap6rLCmMi7dnSsyXSpam',1,'5509124336cf4f2f0bc82a544972717f19070a19131e4e7797ceaf1b28615ab22ddde47f427013a53608439492b391e2ce76','superadmin',1,0,NULL),
 (2,'sunam','sunam@shrestha.com','$2y$10$m1P3C1JF2BPuc0T/vHf3quVVVCGwQJAwF55Gu5aqMLQ8r.mawhOC6',1,'f466db6b0e5c7ead4db8bdfbf3ccc61d1212303cac6d6a0fe7d10c9b8033a852b717f44d7bf645e3a38cbc8887cdd1a7c1e8','user',1,0,1),
 (3,'admin','admin@gmail.com','$2y$10$3TUc2Sziaq2Fj4i5DBeMM.9dz5jPffTnsZfSRQPTzp.mKBRP9VJom',1,'2fb881a52bf258e7146e39baafb2841e58dd8b8d9026903bfe6ddd615d4a9f00e803fdffe71304ec0181ffad68a5a7cd0fb4','admin',1,0,NULL),
